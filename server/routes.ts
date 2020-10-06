@@ -1,7 +1,7 @@
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
 import * as multer from 'multer';
-import { UploadController } from './controllers/';
+import { SpellCheckController, UploadController } from './controllers/';
 
 // SET STORAGE
 const storage = multer.diskStorage({
@@ -22,13 +22,18 @@ class Router {
     this.middleware();
     this.routes();
   }
+
   private middleware() {
     this.api.use(bodyParser.json());
   }
+
   private routes() {
+    this.api.route('/dic').get(SpellCheckController.getDic);
+    this.api.route('/aff').get(SpellCheckController.getAff);
     this.api.route('/upload').post(upload.single('myFile'), UploadController.postImage);
   }
 }
 
 const { api } = new Router();
+
 export { api as Api };

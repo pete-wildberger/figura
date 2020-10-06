@@ -1926,6 +1926,11 @@ dicer@0.2.5:
     readable-stream "1.1.x"
     streamsearch "0.1.2"
 
+dictionary-la@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/dictionary-la/-/dictionary-la-1.0.3.tgz#43e4579c881f07ba82741b6d7474181e50e62cf1"
+  integrity sha512-POCFZrBXOqT9AOSFEgHNrjLg5lpIB4tsJRiV2BL3iGLem7Io9/W8bE8qnKN/FMXrF0LzdITatYoleeRuKc+shw==
+
 diff@4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/diff/-/diff-4.0.2.tgz#60f3aecb89d5fae520c11aa19efc2bb982aade7d"

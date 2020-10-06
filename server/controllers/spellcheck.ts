@@ -2,10 +2,10 @@ import * as path from 'path';
 import type { Request, Response, NextFunction } from 'express';
 
 class SpellCheckController {
-  private aff = null;
-  private dic = null;
+  public aff = null;
+  public dic = null;
   constructor() {
-    const base = path.join(__dirname, 'dictionary-la');
+    const base = path.dirname(require.resolve('dictionary-la/package.json'));
     this.dic = path.join(base, 'index.dic');
     this.aff = path.join(base, 'index.aff');
   }
